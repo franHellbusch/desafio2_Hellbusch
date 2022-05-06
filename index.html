@@ -11,12 +11,47 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <main>
-        <div id="carousel" class="carousel">
-            <button id="prev">Prev</button>
-            <img src="" alt="">
-            <button id="next">Next</button>
-        </div>
+    <main class="main conteiner-fluid">
+        <section class="compra row">
+            <div class="side_nav col-lg-2">
+                <h1>side_nav</h1>
+            </div>
+            <div id="carousel" class="carousel col-lg-10">
+                <div id="slider">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img src="assets/img/remera-mangas-cortas.jpg" class="card-img-top" alt="paisaje">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/img/remera-mangas-largas.jpg" class="card-img-top" alt="paisaje">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/img/remera-musculosa.jpg" class="card-img-top" alt="paisaje">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="prev">Prev</button>
+                <span id="position1_carousel" class="position1_carousel">1</span>
+                <span id="position2_carousel" class="position2_carousel">2</span>
+                <span id="position3_carousel" class="position3_carousel">3</span>
+                <button id="next">Next</button>
+            </div>
+        </section>
     </main>
     <!-- Script de mi archivo JS -->
     <script src="js/miarchivo.js"></script>
