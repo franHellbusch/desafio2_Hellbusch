@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- MI CSS -->
     <link rel="stylesheet" href="css/estilo.css">
+    <!-- icons -->
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
 </head>
 <body>
+    <header class="header conteiner-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <svg class="navbar_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 162.8c0 6.917-2.293 13.88-7.012 19.7l-49.96 61.63c-6.32 7.796-15.62 11.85-25.01 11.85c-7.01 0-14.07-2.262-19.97-6.919L480 203.3V464c0 26.51-21.49 48-48 48H208C181.5 512 160 490.5 160 464V203.3L101.1 249.1C96.05 253.7 88.99 255.1 81.98 255.1c-9.388 0-18.69-4.057-25.01-11.85L7.012 182.5C2.292 176.7-.0003 169.7-.0003 162.8c0-9.262 4.111-18.44 12.01-24.68l135-106.6C159.8 21.49 175.7 16 191.1 16H225.6C233.3 61.36 272.5 96 320 96s86.73-34.64 94.39-80h33.6c16.35 0 32.22 5.49 44.99 15.57l135 106.6C635.9 144.4 640 153.6 640 162.8z"/></svg>
+            Bootstrap
+            </a>
+        </nav>
+    </header>
     <main class="main conteiner-fluid">
         <section class="compra row">
             <div class="side_nav col-lg-2">
@@ -18,16 +28,16 @@
             </div>
             <div id="carousel" class="carousel col-lg-10">
                 <div id="slider">
-                    <div class="card-deck">
-                        <div class="card">
-                            <img src="assets/img/remera-mangas-cortas.jpg" class="card-img-top" alt="paisaje">
-                            <div class="card-body">
+                    <div id="card-deck" class="card-deck">
+                        <div id="card1" class="card">
+                            <img id="img" src="assets/img/remera-mangas-cortas.jpg" class="card-img-top" alt="paisaje">
+                            <div id="card-body" class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div id="card2" class="card">
                             <img src="assets/img/remera-mangas-largas.jpg" class="card-img-top" alt="paisaje">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -35,7 +45,7 @@
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div id="card3" class="card">
                             <img src="assets/img/remera-musculosa.jpg" class="card-img-top" alt="paisaje">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -45,14 +55,19 @@
                         </div>
                     </div>
                 </div>
-                <button id="prev">Prev</button>
-                <span id="position1_carousel" class="position1_carousel">1</span>
-                <span id="position2_carousel" class="position2_carousel">2</span>
-                <span id="position3_carousel" class="position3_carousel">3</span>
-                <button id="next">Next</button>
+                <div class="controles">
+                    <button id="prev">Prev</button>
+                    <span id="position1_carousel" class="position1_carousel">1</span>
+                    <span id="position2_carousel" class="position2_carousel">2</span>
+                    <span id="position3_carousel" class="position3_carousel">3</span>
+                    <button id="next">Next</button>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer conteiner-fluid">
+
+    </footer>
     <!-- Script de mi archivo JS -->
     <script src="js/miarchivo.js"></script>
     <!-- Script de Bootstrap -->
