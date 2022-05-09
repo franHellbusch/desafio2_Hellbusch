@@ -1,5 +1,15 @@
 .main .compra {
-  margin: 0%; }
+  margin: 0%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  .main .compra .side_nav {
+    background-color: beige;
+    border-right: 1px solid black; }
+    .main .compra .side_nav .controles .remeras, .main .compra .side_nav .controles .pantalones, .main .compra .side_nav .controles .buzos, .main .compra .side_nav .controles .todos {
+      margin-top: 10px;
+      border-radius: 4px;
+      background-color: bisque;
+      border: 1px solid silver; }
 
 .header .navbar .navbar-brand .navbar_icon {
   width: 40px; }
