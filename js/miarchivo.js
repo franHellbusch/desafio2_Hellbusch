@@ -68,9 +68,19 @@ function card(imagen, nombre, desc, precio){
 
 let cardDeck = document.getElementById("card-deck");
 
-let cards = document.createElement("div");
-cards.className = "card";
+// let cards = document.createElement("div");
+// cards.className = "col mb-4";
 
-cards.innerHTML = `<img id="img" src="assets/img/remera-mangas-cortas.jpg" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima</p><a href="#" class="btn btn-primary">Go somewhere</a></div>`;
+// cards.innerHTML = `<div id="card" class="card"><img id="img" src="assets/img/remera-mangas-cortas.jpg" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima</p><a href="#" class="btn btn-primary">Go somewhere</a></div></div>`;
 
-cardDeck.append(cards)
+// cardDeck.append(cards)
+
+let num = parseInt(prompt("numero"))
+for (let propiedad in productos[num]){
+    for (i = 0;i <1; i++){
+        let cards = document.createElement("div");
+        cards.className = "col mb-4";
+        cards.innerHTML = `<div id="card" class="card${i + 1}"><img id="img" src="assets/img/${productos[num][propiedad].imagen}" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body"><h5 class="card-title">${productos[num][propiedad].nombre}</h5><p class="card-text">${productos[num][propiedad].desc}</p><a href="#" class="btn btn-primary">${productos[num][propiedad].precio}</a></div></div>`;
+        cardDeck.append(cards)
+    }
+}
