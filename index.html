@@ -24,23 +24,27 @@
     <main class="main conteiner-fluid">
         <section class="compra row">
             <div class="side_nav col-lg-2">
-                <h1>side_nav</h1>
+                <h1 class="side_nav-title">Filtros</h1>
                 <div class="controles d-flex flex-column">
                     <button id="remeras" class="remeras">Remeras</button>
                     <button id="pantalones" class="pantalones">Pantalones</button>
                     <button id="buzos" class="buzos">Buzos</button>
                     <button id="todos" class="todos">Todos los productos</button>
                 </div>
+                <div class="carrito">
+                    <h2 class="carrito_title">Carrito de compra</h2>
+                    <button id="borrarCarrito" class="boton_carrito">Vaciar carrito</button>
+                    <ul id="carritoContenido" class="carrrito_contenido">
+
+                    </ul>
+                </div>
             </div>
             <div id="slider" class="slider col-lg-10">
-                <div id="card-deck" class="card-deck row row-cols-1 row-cols-md-3">
+                <div id="cardDeck" class="card-deck row row-cols-1 row-cols-md-3">
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer conteiner-fluid">
-
-    </footer>
     <!-- Script de mi archivo JS -->
     <script src="js/miarchivo.js"></script>
     <!-- Script de Bootstrap -->

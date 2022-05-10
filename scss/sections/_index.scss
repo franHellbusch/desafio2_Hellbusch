@@ -6,6 +6,9 @@
             bottom: 1px solid black;
         }
         .side_nav{
+            .side_nav-title{
+                font-size: 30px;
+            }
             background-color: beige;
             border-right: 1px solid black;
             .controles{
@@ -14,6 +17,29 @@
                     border-radius: 4px;
                     background-color: bisque;
                     border: 1px solid silver;
+                }
+            }
+            .carrito{
+                margin-top: 1rem;
+                border-top: 1px solid black;
+                .carrito_title{
+                    margin: 10px 0px;
+                    font-size: 20px;
+                    color: coral;
+                }
+                .boton_carrito{
+                    margin-top: 5px;
+                    background-color: black;
+                    border: 1px solid gray;
+                    color: aliceblue;
+                    border-radius: 4px;
+                }
+                .carrito_contenido{
+                    li{
+                        list-style: none;
+                        font-size: 15px;
+                        border-bottom: 1px solid gray;
+                    }
                 }
             }
         }
