@@ -43,8 +43,10 @@ function filtros() {
 }
 
 let num = 0
-filtros();
+todosFiltro();
 comprarRemeras();
+comprarPantalones();
+comprarBuzos();
 let botonRemeras = document.getElementById("remeras");
 let botonPantalones = document.getElementById("pantalones");
 let botonBuzos = document.getElementById("buzos");
@@ -78,10 +80,8 @@ botonBuzos.onclick = () => {
     comprarBuzos()
 }
 
-botonTodos.onclick = () => {
-    while (cardDeck.firstChild) {
-        cardDeck.removeChild(cardDeck.firstChild);
-    }
+// funcion de Filtro: todos los productos
+function todosFiltro() {
     for (i = 0; i < 3; i++){
         for (let propiedad in productos[i]){
             for (index = 0;index <1; index++){
@@ -92,9 +92,16 @@ botonTodos.onclick = () => {
             }
         }
     }
-    comprarBuzos()
-    comprarRemeras()
-    comprarPantalones()
+}
+
+botonTodos.onclick = () => {
+    while (cardDeck.firstChild) {
+        cardDeck.removeChild(cardDeck.firstChild);
+    }
+    todosFiltro();
+    comprarBuzos();
+    comprarRemeras();
+    comprarPantalones();
 }
 
 // seccion de Carrito de compra
@@ -102,7 +109,9 @@ let carrito = document.getElementById("carritoContenido");
 let vaciarCarrito = document.getElementById("borrarCarrito");
 
 vaciarCarrito.onclick = () => {
-    carrito.remove();
+    while (carrito.firstChild) {
+        carrito.removeChild(carrito.firstChild);
+    }
 }
 
 function comprarRemeras() {
