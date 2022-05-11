@@ -1,0 +1,20 @@
+@media only screen and (max-width: 600px) {
+    .main{
+        background-color: gainsboro;
+        .compra{
+            margin: 0px 1rem;
+            padding-top: 1rem;
+            border: 0px;
+            .side_nav{
+                border-radius: 5px 5px 0px 0px;
+                border: 1px solid black;
+            }
+            .slider{
+                border:{
+                    left: 1px solid black;
+                    right: 1px solid black;
+                }
+            }
+        }
+    }
+}

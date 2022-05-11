@@ -1,10 +1,14 @@
 .main{
+    background-color: gainsboro;
     .compra{
-        margin: 0%;
-        border: {
+        margin: 0px 8rem;
+        height: auto;
+        border:{ 
             top: 1px solid black;
-            bottom: 1px solid black;
+            left: 1px solid black;
+            right: 1px solid black;
         }
+        border-radius: 5px;
         .side_nav{
             .side_nav-title{
                 font-size: 30px;
@@ -13,7 +17,7 @@
             border-right: 1px solid black;
             .controles{
                 .remeras, .pantalones, .buzos, .todos{
-                    margin-top: 10px;
+                    margin: 10px 0px;
                     border-radius: 4px;
                     background-color: bisque;
                     border: 1px solid silver;
@@ -42,6 +46,11 @@
                     }
                 }
             }
+        }
+        .slider{
+            background-color: white;
+            height: 95vh;
+            overflow: auto;
         }
     }
 }

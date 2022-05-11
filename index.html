@@ -19,6 +19,16 @@
             <svg class="navbar_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 162.8c0 6.917-2.293 13.88-7.012 19.7l-49.96 61.63c-6.32 7.796-15.62 11.85-25.01 11.85c-7.01 0-14.07-2.262-19.97-6.919L480 203.3V464c0 26.51-21.49 48-48 48H208C181.5 512 160 490.5 160 464V203.3L101.1 249.1C96.05 253.7 88.99 255.1 81.98 255.1c-9.388 0-18.69-4.057-25.01-11.85L7.012 182.5C2.292 176.7-.0003 169.7-.0003 162.8c0-9.262 4.111-18.44 12.01-24.68l135-106.6C159.8 21.49 175.7 16 191.1 16H225.6C233.3 61.36 272.5 96 320 96s86.73-34.64 94.39-80h33.6c16.35 0 32.22 5.49 44.99 15.57l135 106.6C635.9 144.4 640 153.6 640 162.8z"/></svg>
             Bootstrap
             </a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" id="closeSidenav" class="closebtn">&times;</a>
+                <h2 class="carrito_title">Carrito:</h2>
+                <ul id="carritoContenido" class="carrrito_contenido">
+
+                </ul>
+                <button id="borrarCarrito" class="boton_carrito">Vaciar carrito</button>
+                <h3 id="totalCarrito" class="total_carrito"></h3>
+            </div>
+            <svg id="iconCarrito" class="icon_carrito" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>          
         </nav>
     </header>
     <main class="main conteiner-fluid">
@@ -30,13 +40,6 @@
                     <button id="pantalones" class="pantalones">Pantalones</button>
                     <button id="buzos" class="buzos">Buzos</button>
                     <button id="todos" class="todos">Todos los productos</button>
-                </div>
-                <div class="carrito">
-                    <h2 class="carrito_title">Carrito de compra</h2>
-                    <button id="borrarCarrito" class="boton_carrito">Vaciar carrito</button>
-                    <ul id="carritoContenido" class="carrrito_contenido">
-
-                    </ul>
                 </div>
             </div>
             <div id="slider" class="slider col-lg-10">
