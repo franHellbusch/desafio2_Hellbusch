@@ -27,7 +27,7 @@ const buzos = {buzo1, buzo2};
 
 const productos = [remeras, pantalones, buzos];
 
-const contenidoCarrito = [];
+let contenidoCarrito = [];
 
 
 // seccion de Filtros
@@ -114,6 +114,7 @@ vaciarCarrito.onclick = () => {
     while (carrito.firstChild) {
         carrito.removeChild(carrito.firstChild);
     }
+    contenidoCarrito = [];
     sacarTotal();
 }
 
