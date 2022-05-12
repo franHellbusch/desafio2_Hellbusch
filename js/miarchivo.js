@@ -175,6 +175,7 @@ function comprarRemeras() {
     let boton3 = document.getElementById("remeraMusculosa");
     boton1.onclick = () => {
         let remeraCorta = document.createElement("li");
+        remeraCorta.className = "list-group-item ml-3 bg-transparent"
         remeraCorta.innerHTML = "Remera de mangas cortas ($2500)";
         carrito.append(remeraCorta);
         contenidoCarrito.push(remera1);
@@ -183,6 +184,7 @@ function comprarRemeras() {
     }
     boton2.onclick = () => {
         let remeraLarga = document.createElement("li");
+        remeraLarga.className = "list-group-item ml-3 bg-transparent";
         remeraLarga.innerHTML = "Remera de mangas largas ($1900)";
         carrito.append(remeraLarga);
         contenidoCarrito.push(remera2);
@@ -191,6 +193,7 @@ function comprarRemeras() {
     }
     boton3.onclick = () => {
         let remeraMusculosa = document.createElement("li");
+        remeraMusculosa.className = "list-group-item ml-3 bg-transparent";
         remeraMusculosa.innerHTML = "Remera de musculosa ($2100)";
         carrito.append(remeraMusculosa);
         contenidoCarrito.push(remera3);
@@ -205,6 +208,7 @@ function comprarPantalones() {
     let boton3 = document.getElementById("pantalonJogging");
     boton1.onclick = () => {
         let pantalonCorto = document.createElement("li");
+        pantalonCorto.className = "list-group-item ml-3 bg-transparent";
         pantalonCorto.innerHTML = "Pantalon corto ($2700)";
         carrito.append(pantalonCorto);
         contenidoCarrito.push(pantalon1);
@@ -213,6 +217,7 @@ function comprarPantalones() {
     }
     boton2.onclick = () => {
         let pantalonJean = document.createElement("li");
+        pantalonJean.className = "list-group-item ml-3 bg-transparent";
         pantalonJean.innerHTML = "Pantalon jean ($3000)";
         carrito.append(pantalonJean);
         contenidoCarrito.push(pantalon2);
@@ -221,6 +226,7 @@ function comprarPantalones() {
     }
     boton3.onclick = () => {
         let pantalonJogging = document.createElement("li");
+        pantalonJogging.className = "list-group-item ml-3 bg-transparent";
         pantalonJogging.innerHTML = "Pantalon jogging ($2800)";
         carrito.append(pantalonJogging);
         contenidoCarrito.push(pantalon3);
@@ -234,6 +240,7 @@ function comprarBuzos() {
     let boton2 = document.getElementById("buzoSinCapucha");
     boton1.onclick = () => {
         let buzoCapucha = document.createElement("li");
+        buzoCapucha.className = "list-group-item ml-3 bg-transparent";
         buzoCapucha.innerHTML = "Buzo con capucha ($4000)";
         carrito.append(buzoCapucha);
         contenidoCarrito.push(buzo1);
@@ -242,6 +249,7 @@ function comprarBuzos() {
     }
     boton2.onclick = () => {
         let buzoSinCapucha = document.createElement("li");
+        buzoSinCapucha.className = "list-group-item ml-3 bg-transparent";
         buzoSinCapucha.innerHTML = "Buzo sin capucha ($3500)";
         carrito.append(buzoSinCapucha);
         contenidoCarrito.push(buzo2);
