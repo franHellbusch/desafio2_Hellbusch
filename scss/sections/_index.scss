@@ -1,26 +1,38 @@
 .main{
     background-color: gainsboro;
     .compra{
+        padding-top: 2rem;
         margin: 0px 8rem;
         height: auto;
-        border:{ 
-            top: 1px solid black;
-            left: 1px solid black;
-            right: 1px solid black;
-        }
-        border-radius: 5px;
         .side_nav{
-            .side_nav-title{
-                font-size: 30px;
-            }
             background-color: beige;
-            border-right: 1px solid black;
+            border: {
+                right: 1px solid black;
+                top: 1px solid black;
+                left: 1px solid black;
+            }
+            border-radius: 5px 0px 0px 5px;
+            .side_nav-controls{
+                .side_nav-title{
+                    font-size: 30px;
+                    margin-top: 5px;
+                }
+                .control_filtros1, .control_filtros2{
+                    display: none;
+                }
+            }
             .controles{
                 .remeras, .pantalones, .buzos, .todos{
                     margin: 10px 0px;
                     border-radius: 4px;
                     background-color: bisque;
                     border: 1px solid silver;
+                    &:hover{
+                        background-color: gainsboro;
+                    }
+                    &:focus{
+                        background-color: gainsboro;
+                    }
                 }
             }
             .carrito{
@@ -42,8 +54,13 @@
         }
         .slider{
             background-color: white;
-            height: 95vh;
+            height: 90vh;
             overflow: auto;
+            border: {
+                top: 1px solid black;
+                right: 1px solid black;
+            }
+            border-radius: 0px 5px 5px 0px;
         }
     }
 }

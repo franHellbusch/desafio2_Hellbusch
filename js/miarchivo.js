@@ -38,7 +38,7 @@ function filtros() {
         for (i = 0;i <1; i++){
             let cards = document.createElement("div");
             cards.className = "col mb-4";
-            cards.innerHTML = `<div id="card" class="card${i + 1}"><img id="img" src="assets/img/${productos[num][propiedad].imagen}" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body"><h5 class="card-title">${productos[num][propiedad].nombre}</h5><p class="card-text">${productos[num][propiedad].desc}</p><botton id="${productos[num][propiedad].id}" class="btn btn-primary">COMPRAR ($${productos[num][propiedad].precio})</bottom></div></div>`;
+            cards.innerHTML = `<div id="card" class="card${i + 1} border mt-3 rounded"><img id="img" src="assets/img/${productos[num][propiedad].imagen}" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body text-center"><h5 class="card-title">${productos[num][propiedad].nombre}</h5><p class="card-text">${productos[num][propiedad].desc}</p><botton id="${productos[num][propiedad].id}" class="btn btn-outline-success">COMPRAR ($${productos[num][propiedad].precio})</bottom></div></div>`;
             cardDeck.append(cards)
         }
     }
@@ -89,7 +89,7 @@ function todosFiltro() {
             for (index = 0;index <1; index++){
                 let cards = document.createElement("div");
                 cards.className = "col mb-4";
-                cards.innerHTML = `<div id="card" class="card${i + 1}"><img id="img" src="assets/img/${productos[i][propiedad].imagen}" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body"><h5 class="card-title">${productos[i][propiedad].nombre}</h5><p class="card-text">${productos[i][propiedad].desc}</p><botton id="${productos[i][propiedad].id}" class="btn btn-primary">COMPRAR ($${productos[i][propiedad].precio})</botton></div></div>`;
+                cards.innerHTML = `<div id="card" class="card${i + 1} border mt-3 rounded"><img id="img" src="assets/img/${productos[i][propiedad].imagen}" class="card-img-top" alt="paisaje"><div id="card-body" class="card-body text-center"><h5 class="card-title">${productos[i][propiedad].nombre}</h5><p class="card-text">${productos[i][propiedad].desc}</p><botton id="${productos[i][propiedad].id}" class="btn btn-outline-success">COMPRAR ($${productos[i][propiedad].precio})</botton></div></div>`;
                 cardDeck.append(cards)
             }
         }
@@ -107,6 +107,10 @@ botonTodos.onclick = () => {
 }
 
 // seccion de Carrito de compra
+let notificacionCompra = document.createElement("h3");
+notificacionCompra.className = "bg-success border position-absolute";
+notificacionCompra.innerHTML = "El producto fue enviado al carrito!"
+
 let carrito = document.getElementById("carritoContenido");
 let vaciarCarrito = document.getElementById("borrarCarrito");
 
@@ -116,6 +120,8 @@ vaciarCarrito.onclick = () => {
     }
     contenidoCarrito = [];
     sacarTotal();
+    cantidadProductos = 0;
+    badgeCarrito.innerHTML = cantidadProductos;
 }
 
 let totalCarrito = document.getElementById("totalCarrito");
@@ -135,6 +141,7 @@ function comprarRemeras() {
         carrito.append(remeraCorta);
         contenidoCarrito.push(remera1);
         sacarTotal();
+        badge();
     }
     boton2.onclick = () => {
         let remeraLarga = document.createElement("li");
@@ -142,6 +149,7 @@ function comprarRemeras() {
         carrito.append(remeraLarga);
         contenidoCarrito.push(remera2);
         sacarTotal();
+        badge();
     }
     boton3.onclick = () => {
         let remeraMusculosa = document.createElement("li");
@@ -149,6 +157,7 @@ function comprarRemeras() {
         carrito.append(remeraMusculosa);
         contenidoCarrito.push(remera3);
         sacarTotal();
+        badge();
     }
 }
 
@@ -162,6 +171,7 @@ function comprarPantalones() {
         carrito.append(pantalonCorto);
         contenidoCarrito.push(pantalon1);
         sacarTotal();
+        badge();
     }
     boton2.onclick = () => {
         let pantalonJean = document.createElement("li");
@@ -169,6 +179,7 @@ function comprarPantalones() {
         carrito.append(pantalonJean);
         contenidoCarrito.push(pantalon2);
         sacarTotal();
+        badge();
     }
     boton3.onclick = () => {
         let pantalonJogging = document.createElement("li");
@@ -176,6 +187,7 @@ function comprarPantalones() {
         carrito.append(pantalonJogging);
         contenidoCarrito.push(pantalon3);
         sacarTotal();
+        badge();
     }
 }
 
@@ -188,6 +200,7 @@ function comprarBuzos() {
         carrito.append(buzoCapucha);
         contenidoCarrito.push(buzo1);
         sacarTotal();
+        badge();
     }
     boton2.onclick = () => {
         let buzoSinCapucha = document.createElement("li");
@@ -195,18 +208,42 @@ function comprarBuzos() {
         carrito.append(buzoSinCapucha);
         contenidoCarrito.push(buzo2);
         sacarTotal();
+        badge();
     }
 }
 
 let iconCarrito = document.getElementById("iconCarrito");
 let closeSidenav = document.getElementById("closeSidenav");
 let mySidenav = document.getElementById("mySidenav");
+let badgeCarrito = document.getElementById("badgeCarrito");
+let cantidadProductos = 0
 
 iconCarrito.onclick = () => {
     mySidenav.style.width = "350px";
     sacarTotal();
 }
 
+function badge() {
+    cantidadProductos += 1;
+    badgeCarrito.innerHTML = cantidadProductos;
+}
+
 closeSidenav.onclick = () => {
     mySidenav.style.width = "0px";
+}
+
+let controlFiltros1 = document.getElementById("controlFiltros1");
+let controlFiltros2 = document.getElementById("controlFiltros2");
+let filtrosContenido = document.getElementById("controles");
+
+controlFiltros1.onclick = () => {
+    filtrosContenido.style.height = "auto";
+    controlFiltros2.style.display = "block";
+    controlFiltros1.style.display = "none";
+}
+
+controlFiltros2.onclick = () => {
+    filtrosContenido.style.height = "0";
+    controlFiltros1.style.display = "block";
+    controlFiltros2.style.display = "none";
 }

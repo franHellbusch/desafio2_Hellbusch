@@ -8,9 +8,27 @@
             .side_nav{
                 border-radius: 5px 5px 0px 0px;
                 border: 1px solid black;
+                .side_nav-controls{
+                    .control_filtros1{
+                        display: block;
+                        width: 25px;
+                    }
+                    .control_filtros2{
+                        width: 15px;
+                    }
+                }
+                .controles{
+                    height: 0;
+                    width: auto;
+                    z-index: 1;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                }
             }
             .slider{
-                border:{
+                height: 85vh;
+                border-radius: 0px;
+                border: {
                     left: 1px solid black;
                     right: 1px solid black;
                 }
