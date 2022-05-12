@@ -20,17 +20,55 @@ let pantalon3 = new Producto ("pantalon-jogging.webp", "Pantalon jogging", "Lore
 // buzo
 let buzo1 = new Producto ("buzo-capucha.jpg", "Buzo con capucha", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", 4000, "buzoCapucha");
 let buzo2 = new Producto ("buzo-sin-capucha.png", "Buzo sin capucha", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit culpa facere quisquam minima", 3500, "buzoSinCapucha");
-
+// secciones
 const remeras = {remera1, remera2, remera3};
 const pantalones = {pantalon1, pantalon2, pantalon3};
 const buzos = {buzo1, buzo2};
-
+// todos los productos
 const productos = [remeras, pantalones, buzos];
-
+// carrito
 let contenidoCarrito = [];
 
+// side nav
+let iconCarrito = document.getElementById("iconCarrito");
+let closeSidenav = document.getElementById("closeSidenav");
+let mySidenav = document.getElementById("mySidenav");
+let badgeCarrito = document.getElementById("badgeCarrito");
+let cantidadProductos = 0
+
+iconCarrito.onclick = () => {
+    mySidenav.style.width = "350px";
+    sacarTotal();
+}
+
+function badge() {
+    cantidadProductos += 1;
+    badgeCarrito.innerHTML = cantidadProductos;
+}
+
+closeSidenav.onclick = () => {
+    mySidenav.style.width = "0px";
+}
 
 // seccion de Filtros
+// dropdown en mobile
+let controlFiltros1 = document.getElementById("controlFiltros1");
+let controlFiltros2 = document.getElementById("controlFiltros2");
+let filtrosContenido = document.getElementById("controles");
+
+controlFiltros1.onclick = () => {
+    filtrosContenido.style.height = "auto";
+    controlFiltros2.style.display = "block";
+    controlFiltros1.style.display = "none";
+}
+
+controlFiltros2.onclick = () => {
+    filtrosContenido.style.height = "0";
+    controlFiltros1.style.display = "block";
+    controlFiltros2.style.display = "none";
+}
+
+// cards
 let cardDeck = document.getElementById("cardDeck");
 
 function filtros() {
@@ -210,40 +248,4 @@ function comprarBuzos() {
         sacarTotal();
         badge();
     }
-}
-
-let iconCarrito = document.getElementById("iconCarrito");
-let closeSidenav = document.getElementById("closeSidenav");
-let mySidenav = document.getElementById("mySidenav");
-let badgeCarrito = document.getElementById("badgeCarrito");
-let cantidadProductos = 0
-
-iconCarrito.onclick = () => {
-    mySidenav.style.width = "350px";
-    sacarTotal();
-}
-
-function badge() {
-    cantidadProductos += 1;
-    badgeCarrito.innerHTML = cantidadProductos;
-}
-
-closeSidenav.onclick = () => {
-    mySidenav.style.width = "0px";
-}
-
-let controlFiltros1 = document.getElementById("controlFiltros1");
-let controlFiltros2 = document.getElementById("controlFiltros2");
-let filtrosContenido = document.getElementById("controles");
-
-controlFiltros1.onclick = () => {
-    filtrosContenido.style.height = "auto";
-    controlFiltros2.style.display = "block";
-    controlFiltros1.style.display = "none";
-}
-
-controlFiltros2.onclick = () => {
-    filtrosContenido.style.height = "0";
-    controlFiltros1.style.display = "block";
-    controlFiltros2.style.display = "none";
 }
